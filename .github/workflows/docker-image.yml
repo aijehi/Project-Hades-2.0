@@ -16,14 +16,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Build Docker image
-        run: docker buildx build -t hello .
-
       - name: Log in to Huawei Cloud SWR
         uses: huaweicloud/swr-login@v2.1.0
         with:
           access-key-id: ${{ secrets.ACCESSKEY }}
-          access-key-secret: ${{ secrets.SECRETACCESSKEY }}
+          access-key-secret: ${{ secrets.SECRET_ACCESSKEY }}
           region: af-south-1
 
       - name: Build and push Docker image
