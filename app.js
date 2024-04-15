@@ -14,7 +14,7 @@ const db = mysql.createConnection({
   port: 3306,
 });
 
-// Connect to MySQL
+// Connect to MySQL....
 db.connect(err => {
   if (err) {
     console.error('MySQL connection error:', err);
