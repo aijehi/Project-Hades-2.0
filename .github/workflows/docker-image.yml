@@ -12,7 +12,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-   steps:
+    steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -22,8 +22,8 @@ jobs:
       - name: Log in to Huawei Cloud SWR
         uses: huaweicloud/swr-login@v2.1.0
         with:
-          access-key-id: ${{6BLHJIM4UAZ3RVTBVLSA}}
-          access-key-secret: ${{r0GShaF8STlK6LxkFERE2AUMmaZNjQKACranDZ4y}}
+          access-key-id: ${{ secrets.ACCESSKEY }}
+          access-key-secret: ${{ secrets.SECRETACCESSKEY }}
           region: af-south-1
 
       - name: Build and push Docker image
