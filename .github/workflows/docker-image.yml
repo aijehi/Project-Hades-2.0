@@ -20,7 +20,7 @@ jobs:
         uses: huaweicloud/swr-login@v2.1.0
         with:
           access-key-id: ${{ secrets.ACCESSKEY }}
-          access-key-secret: ${{ secrets.SECRET_ACCESSKEY }}
+          access-key-secret: ${{ secrets.SECRETS_ACCESSKEY }}
           region: af-south-1
 
       - name: Build and push Docker image
